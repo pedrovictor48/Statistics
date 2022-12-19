@@ -17,7 +17,7 @@ function(x, conf_level) {
 
 ## apenas com média e dp amostrais
 function(S, x_barra, alfa, n) {
-    t = abs(qt(alfa/2, df = n - 1))
+    t = qt(1 - alfa/2, df = n - 1)
     
     erro = t*S/sqrt(n)
     L = x_barra - erro
