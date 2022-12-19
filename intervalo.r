@@ -23,3 +23,13 @@ function(S, x_barra, alfa, n) {
     L = x_barra - erro
     R = x_barra + erro
 }
+
+## proporcao
+function(alfa, p, n) {
+    # p seria a proporcao amostral e pi a propocao pop.
+    z = qnorm(1 - alfa/2)
+    erro = z * sqrt(p * ( 1- p ) / n)
+    ## limites para pi
+    L = p - erro
+    R = p + erro
+}
